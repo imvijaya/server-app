@@ -1,0 +1,10 @@
+<div class="container">
+    Search: <input type="text" placeholder="Enter name.." [(ngModel)]="searchName">
+    <p *ngIf="searchName">You are searching for {{ searchName }}</p>
+    <br><br>
+    <button type="button" class="btn btn-primary" (click)="getUsers()">search person</button>
+
+    <div *ngFor="let user of userData">
+        Name: {{user.name}} from {{user.country}}
+    </div>
+</div>
